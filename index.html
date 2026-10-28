@@ -1,31 +1,106 @@
 <!doctype html>
 <html lang="th">
-  <head>
+<head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <title>My Profile</title>
-    <link rel="Stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
-  </head>
-  <body>
-    <main class="profile-card">
-      
-      <img src="/images/profile.JPG" 
-      alt="รูปโปรไฟล์" 
-      class="profile-image" />
+</head>
+<body>
 
-      <h1>My Profile</h1>
-      <p>ชื่อ-นามสกุล: <span id="fullname">ปาณวัฐ รักรอดจิต</span></p>
-      <p>ชื่อเล่น: <span id="nickname">บอล</span></p>
-      <p>รหัสประจำตัว: <span id="studentID">6602041620106</span></p>
+    <!-- ส่วนหัวและเมนูนำทาง -->
+    <header class="site-header">
+        <h1>My Portfolio</h1>
 
-      <div class="motto">
-        <h2>คติประจำใจ</h2>
-        <p id="motto">ความพยายามอยู่ที่ไหน ใครจะไปรู้หล่ะ</p>
-      </div>
+        <nav>
+            <a href="#about">เกี่ยวกับฉัน</a>
+            <a href="#skills">ทักษะ</a>
+            <a href="#projects">ผลงาน</a>
+        </nav>
+    </header>
 
-      <button id="greetingBtn">ทักทาย</button>
-      <p id="greetingMessage">ยินดีต้อนรับเข้าสู่โปรไฟล์ของฉัน</p>
+    <!-- เนื้อหาหลักของเว็บไซต์ -->
+    <main class="portfolio-main">
+
+        <!-- ส่วนแนะนำตัวจากโปรเจกต์เดิม -->
+        <section class="profile-card" id="about">
+
+            <img
+                src="images/profile.JPG"
+                alt="รูปโปรไฟล์"
+                class="profile-image"
+            />
+
+            <h1>My Profile</h1>
+
+            <p>
+                ชื่อ-นามสกุล:
+                <span id="fullname">[ชื่อ-นามสกุล]</span>
+            </p>
+
+            <p>
+                ชื่อเล่น:
+                <span id="nickname">[ชื่อเล่น]</span>
+            </p>
+
+            <p>
+                รหัสประจำตัว:
+                <span id="studentID">[รหัสประจำตัว]</span>
+            </p>
+
+            <div class="motto">
+                <h2>คติประจำใจ</h2>
+                <p id="motto">
+                    [ใส่คติประจำใจของตนเอง]
+                </p>
+            </div>
+
+            <button id="greetingBtn">ทักทาย</button>
+
+            <p id="greetingMessage">
+                ยินดีต้อนรับเข้าสู่โปรไฟล์ของฉัน
+            </p>
+
+        </section>
+
+        <!-- ส่วนทักษะที่สนใจ -->
+        <section class="content-section" id="skills">
+
+            <h2>ทักษะที่สนใจ</h2>
+
+            <ul class="skills-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+
+        </section>
+
+        <!-- ส่วนแสดงผลงาน -->
+        <section class="content-section" id="projects">
+
+            <h2>ผลงานของฉัน</h2>
+
+            <article class="project-card">
+                <h3>My Developer Profile</h3>
+
+                <p>
+                    เว็บไซต์แนะนำตัวที่พัฒนาด้วย HTML, CSS
+                    และ JavaScript เพื่อฝึกสร้างโครงสร้างเว็บ
+                    การตกแต่งหน้าเว็บไซต์ และการโต้ตอบกับผู้ใช้
+                </p>
+            </article>
+
+        </section>
+
     </main>
-  </body>
+
+    <!-- ส่วนท้ายของเว็บไซต์ -->
+    <footer class="site-footer">
+        <p>My Developer Portfolio</p>
+        <p>สร้างด้วย HTML และ CSS</p>
+    </footer>
+
+</body>
 </html>
