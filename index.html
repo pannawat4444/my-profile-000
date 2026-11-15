@@ -3,82 +3,1015 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="My Developer Portfolio" />
-    <title>My Developer Portfolio</title>
+    <title>พอร์ตโฟลิโอ | นายปาณวัฐ รักรอดจิต (อาจารย์ผู้สอน & นักพัฒนาเว็บ)</title>
+    <!-- Google Fonts: Prompt & Inter for high readability in Thai and English -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Prompt:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
+    <!-- Top Notification / Status Banner -->
+    <div class="top-announcement">
+      <div class="container announcement-content">
+        <span class="pulse-indicator"></span>
+        <span class="announcement-text"
+          >📚 เว็บไซต์ประกอบการสอน: รายวิชาการพัฒนาเว็บแอปพลิเคชัน (Web Application
+          Development)</span
+        >
+        <a href="#projects" class="announcement-link"
+          >ดูตัวอย่างผลงาน <i class="fa-solid fa-arrow-right"></i
+        ></a>
+      </div>
+    </div>
+
+    <!-- Navigation Bar (Head Menu) -->
     <header class="site-header">
-      <a class="brand" href="#top">My Portfolio</a>
-      <nav class="site-nav" aria-label="เมนูหลัก">
-        <a href="#about">เกี่ยวกับฉัน</a>
-        <a href="#skills">ทักษะ</a>
-        <a href="#projects">ผลงาน</a>
+      <nav class="navbar container">
+        <a href="#hero" class="nav-logo">
+          <span class="logo-icon"><i class="fa-solid fa-code"></i></span>
+          <span class="logo-text"
+            >Panawat<span class="highlight">.Dev</span></span
+          >
+        </a>
+
+        <!-- Desktop Navigation Menu -->
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="#hero" class="nav-link active">
+              <i class="fa-solid fa-house"></i> หน้าแรก
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link">
+              <i class="fa-solid fa-user"></i> เกี่ยวกับฉัน
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#skills" class="nav-link">
+              <i class="fa-solid fa-layer-group"></i> ทักษะ
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#projects" class="nav-link">
+              <i class="fa-solid fa-laptop-code"></i> ผลงาน
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#estimator" class="nav-link">
+              <i class="fa-solid fa-calculator"></i> คำนวณราคา
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#teaching" class="nav-link">
+              <i class="fa-solid fa-chalkboard-user"></i> บทเรียน
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">
+              <i class="fa-solid fa-paper-plane"></i> ติดต่อ
+            </a>
+          </li>
+        </ul>
+
+        <!-- Action / CTA Button in Header -->
+        <div class="nav-actions">
+          <a href="#contact" class="btn btn-outline btn-sm">
+            <i class="fa-regular fa-envelope"></i> ติดต่อฉัน
+          </a>
+        </div>
       </nav>
     </header>
 
-    <main class="portfolio-main" id="top">
-      <section class="profile-card" id="about" aria-labelledby="profile-title">
-        <img src="images/profile.JPG" alt="รูปโปรไฟล์" class="profile-image" />
-        <div class="profile-content">
-          <p class="eyebrow">ABOUT ME</p>
-          <h1 id="profile-title">My Profile</h1>
-          <p>ชื่อ-นามสกุล: <span id="fullname">[ชื่อ-นามสกุล]</span></p>
-          <p>ชื่อเล่น: <span id="nickname">[ชื่อเล่น]</span></p>
-          <p>รหัสประจำตัว: <span id="studentID">[รหัสประจำตัว]</span></p>
-          <div class="motto">
-            <h2>คติประจำใจ</h2>
-            <p id="motto-text">[ใส่คติประจำใจของตนเอง]</p>
+    <main>
+      <!-- Hero / Head Section -->
+      <section id="hero" class="hero-section">
+        <div class="hero-bg-shapes">
+          <div class="shape shape-1"></div>
+          <div class="shape shape-2"></div>
+        </div>
+
+        <!-- Personalized Welcome Banner (ส่วนที่ 1 ของโจทย์งานที่ 8) -->
+        <div class="container welcome-banner-container">
+          <div class="welcome-banner-card">
+            <div class="welcome-icon">
+              <i class="fa-solid fa-hand-sparkles"></i>
+            </div>
+            <div class="welcome-content">
+              <span class="welcome-badge">
+                <i class="fa-solid fa-sparkles"></i> ส่วนที่ 1: ระบบข้อความต้อนรับผู้เข้าชม (Personalized Welcome)
+              </span>
+              <h2 id="welcomeText" class="welcome-text">
+                ยินดีต้อนรับคุณผู้เยี่ยมชม เข้าสู่เว็บไซต์ Portfolio ของฉัน
+              </h2>
+            </div>
+            <button id="changeNameBtn" class="btn btn-sm btn-outline welcome-action-btn">
+              <i class="fa-solid fa-user-pen"></i> แก้ไขชื่อของคุณ
+            </button>
           </div>
-          <button id="greetingBtn" type="button">ทักทาย</button>
-          <p id="greetingMessage" aria-live="polite">
-            ยินดีต้อนรับเข้าสู่โปรไฟล์ของฉัน
-          </p>
         </div>
-      </section>
 
-      <section
-        class="content-section"
-        id="skills"
-        aria-labelledby="skills-title"
-      >
-        <div class="section-heading">
-          <p class="eyebrow">WHAT I KNOW</p>
-          <h2 id="skills-title">ทักษะที่สนใจ</h2>
-        </div>
-        <ul class="skills-list">
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-        </ul>
-      </section>
+        <div class="container hero-container">
+          <!-- Left Column: Introduction & Details -->
+          <div class="hero-text-content">
+            <div class="status-badge">
+              <span class="status-dot"></span>
+              <span>พร้อมสำหรับการสอน & พัฒนาโปรเจกต์เว็บ</span>
+            </div>
 
-      <section
-        class="content-section"
-        id="projects"
-        aria-labelledby="projects-title"
-      >
-        <div class="section-heading">
-          <p class="eyebrow">MY WORK</p>
-          <h2 id="projects-title">ผลงานของฉัน</h2>
-        </div>
-        <div class="projects-grid">
-          <article class="project-card">
-            <h3>My Developer Profile</h3>
-            <p>
-              เว็บไซต์แนะนำตัวที่พัฒนาด้วย HTML, CSS และ JavaScript
-              เพื่อฝึกสร้างโครงสร้างเว็บ การตกแต่งหน้าเว็บไซต์
-              และการโต้ตอบกับผู้ใช้
+            <h1 class="hero-title">
+              สวัสดีครับ ผม
+              <span class="gradient-text" id="fullName"
+                >นายปาณวัฐ รักรอดจิต</span
+              >
+            </h1>
+
+            <p class="hero-subtitle">
+              (ชื่อเล่น: <strong id="nickname">บอล</strong> | รหัสประจำตัว:
+              <strong id="studentId">680000000</strong>)
             </p>
-          </article>
+
+            <p class="hero-bio">
+              ยินดีต้อนรับสู่เว็บพอร์ตโฟลิโอส่วนตัวและพื้นที่จัดแสดงโครงงาน
+              สำหรับการจัดการเรียนการสอนใน
+              <strong>รายวิชาการพัฒนาเว็บแอปพลิเคชัน</strong>
+              มุ่งเน้นการออกแบบเว็บไซต์ที่สวยงาม ใช้งานง่าย โครงสร้างโค้ดสะอาด
+              และตอบสนองทุกอุปกรณ์ (Responsive Web Design)
+            </p>
+
+            <!-- Motto Quote Box -->
+            <div class="motto-box">
+              <div class="motto-icon">
+                <i class="fa-solid fa-quote-left"></i>
+              </div>
+              <div class="motto-body">
+                <h4 class="motto-title">คติประจำใจ (Motto)</h4>
+                <p class="motto-quote" id="motto">
+                  "ความพยายามอยู่ที่ไหน ใครจะไปรู้หล่ะ"
+                </p>
+              </div>
+            </div>
+
+            <!-- Interactive Greeting Section (Retaining original script functionality) -->
+            <div class="greeting-action-card">
+              <button id="greetingBtn" class="btn btn-primary">
+                <i class="fa-solid fa-hand-sparkles"></i> ทักทาย
+              </button>
+              <p id="greetingMessage" class="greeting-text">
+                ยินดีต้อนรับเข้าสู่หน้าโปรไฟล์ของฉัน!
+              </p>
+            </div>
+
+            <!-- Fast Stat Counters -->
+            <div class="hero-stats">
+              <div class="stat-item">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">HTML5 & CSS3 Standard</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">6+</div>
+                <div class="stat-label">Web Project Showcases</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">Mobile</div>
+                <div class="stat-label">Responsive Ready</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Profile Image & Floating Cards -->
+          <div class="hero-media-content">
+            <div class="profile-card-wrapper">
+              <div class="profile-glow"></div>
+              <div class="profile-avatar-frame">
+                <img
+                  src="images/profile.JPG"
+                  alt="รูปโปรไฟล์ นายปาณวัฐ รักรอดจิต"
+                  class="profile-image"
+                />
+              </div>
+
+              <!-- Floating Info Card 1 -->
+              <div class="floating-badge badge-top-right">
+                <div class="badge-icon icon-code">
+                  <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                <div class="badge-content">
+                  <span class="badge-title">Web Application</span>
+                  <span class="badge-sub">Full Stack & UI/UX</span>
+                </div>
+              </div>
+
+              <!-- Floating Info Card 2 -->
+              <div class="floating-badge badge-bottom-left">
+                <div class="badge-icon icon-teach">
+                  <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div class="badge-content">
+                  <span class="badge-title">Course Instructor</span>
+                  <span class="badge-sub">การพัฒนาเว็บแอปฯ</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About & Course Objective Section -->
+      <section id="about" class="section about-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">เกี่ยวกับฉัน & รายวิชา</span>
+            <h2 class="section-title">เรียนรู้เพื่อสร้างสรรค์เว็บแอปพลิเคชัน</h2>
+            <p class="section-subtitle">
+              พื้นฐานที่แข็งแกร่งใน HTML & CSS คือกุญแจสำคัญสู่การเป็น Modern
+              Web Developer
+            </p>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-card highlight-card">
+              <div class="about-card-icon">
+                <i class="fa-solid fa-lightbulb"></i>
+              </div>
+              <h3>เป้าหมายการเรียนรู้ในวิชา</h3>
+              <p>
+                มุ่งเน้นให้นักศึกษาสามารถเข้าใจโครงสร้างเว็บเชิงความหมาย
+                (Semantic HTML5) การจัดวางหน้าเว็บด้วย Flexbox และ CSS Grid
+                รวมถึงการสร้างสไตล์ที่ทันสมัยโดยไม่ต้องพึ่งพาไลบรารีซับซ้อน
+              </p>
+              <ul class="feature-checklist">
+                <li>
+                  <i class="fa-solid fa-circle-check"></i> Semantic HTML & Accessibility
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-check"></i> Responsive Layouts (Flex & Grid)
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-check"></i> Pure CSS Interactions & UI
+                </li>
+              </ul>
+            </div>
+
+            <div class="about-card">
+              <div class="about-card-icon icon-blue">
+                <i class="fa-solid fa-compass-drafting"></i>
+              </div>
+              <h3>โครงสร้างการสอน</h3>
+              <p>
+                สอนแบบลงมือปฏิบัติจริง (Hands-on Practice)
+                ตั้งแต่การออกแบบเลย์เอาต์, การจัดการสีและฟอนต์,
+                จนถึงการสร้างฟิลเตอร์และเมนูที่ตอบสนองต่อผู้ใช้
+              </p>
+              <div class="teaching-tags">
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">Responsive</span>
+                <span class="tag">Modern UI</span>
+              </div>
+            </div>
+
+            <div class="about-card">
+              <div class="about-card-icon icon-green">
+                <i class="fa-solid fa-rocket"></i>
+              </div>
+              <h3>ต่อยอดสู่ระดับสูง</h3>
+              <p>
+                เตรียมความพร้อมเพื่อเชื่อมต่อกับ JavaScript, API
+                และการพัฒนาในฝั่ง Backend ต่อไปในอนาคต
+                ตามลำดับขั้นตอนการเรียนรู้อย่างเป็นระบบ
+              </p>
+              <div class="teaching-tags">
+                <span class="tag">JavaScript</span>
+                <span class="tag">REST API</span>
+                <span class="tag">Database</span>
+                <span class="tag">Deployment</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" class="section skills-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">ทักษะความสามารถ</span>
+            <h2 class="section-title">เทคโนโลยีที่ใช้ในการสอนและการพัฒนา</h2>
+            <p class="section-subtitle">
+              ชุดเครื่องมือพื้นฐานและระดับสูงที่ใช้สำหรับงานพัฒนาเว็บในปัจจุบัน
+            </p>
+          </div>
+
+          <div class="skills-grid">
+            <!-- Skill Category 1 -->
+            <div class="skill-category-card">
+              <div class="category-header">
+                <i class="fa-brands fa-html5 skill-icon html-color"></i>
+                <div>
+                  <h4>Frontend Core</h4>
+                  <p>โครงสร้างและการจัดวางหน้าเว็บ</p>
+                </div>
+              </div>
+              <div class="skill-list">
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <span>HTML5 (Semantic & SEO)</span>
+                    <span>95%</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 95%"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <span>CSS3 (Flexbox, Grid, Animation)</span>
+                    <span>90%</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 90%"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <span>Responsive Web Design</span>
+                    <span>92%</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 92%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Skill Category 2 -->
+            <div class="skill-category-card">
+              <div class="category-header">
+                <i class="fa-brands fa-js skill-icon js-color"></i>
+                <div>
+                  <h4>Interactive & Scripting</h4>
+                  <p>การทำงานร่วมกับฟังก์ชันและเหตุการณ์</p>
+                </div>
+              </div>
+              <div class="skill-list">
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <span>Vanilla JavaScript (DOM Manipulation)</span>
+                    <span>85%</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 85%"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <span>Event Handling & Logic</span>
+                    <span>80%</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 80%"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <span>Fetch API & JSON</span>
+                    <span>75%</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 75%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Skill Category 3 -->
+            <div class="skill-category-card">
+              <div class="category-header">
+                <i class="fa-solid fa-screwdriver-wrench skill-icon tools-color"></i>
+                <div>
+                  <h4>Tools & Workflow</h4>
+                  <p>เครื่องมือที่จำเป็นสำหรับนักพัฒนา</p>
+                </div>
+              </div>
+              <div class="skill-list">
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <span>Git & GitHub Workflow</span>
+                    <span>85%</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 85%"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <span>VS Code & Developer Extensions</span>
+                    <span>90%</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 90%"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <span>Figma to HTML/CSS Conversion</span>
+                    <span>80%</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 80%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section with Pure CSS Filter Menu -->
+      <section id="projects" class="section projects-section">
+        <div class="container projects-container">
+          <div class="section-header">
+            <span class="section-tag">แกลเลอรี่ผลงานและโครงงาน</span>
+            <h2 class="section-title">ตัวอย่างผลงานพัฒนาเว็บแอปพลิเคชัน</h2>
+            <p class="section-subtitle">
+              คัดสรรผลงานจำลองสำหรับใช้ในการเรียนการสอน
+              สามารถคลิกปุ่มฟิลเตอร์ด้านล่างเพื่อคัดกรองตามหมวดหมู่ได้ทันที
+              (ทำงานด้วย Pure CSS ไม่ต้องใช้สคริปต์)
+            </p>
+          </div>
+
+          <!-- Pure CSS Filter Form / Controls -->
+          <!-- We use hidden radio inputs + styled labels. The CSS selector :has() filters project cards dynamically -->
+          <div class="filter-controls-wrapper">
+            <input
+              type="radio"
+              name="project-filter"
+              id="filter-all"
+              class="filter-radio"
+              checked
+            />
+            <input
+              type="radio"
+              name="project-filter"
+              id="filter-frontend"
+              class="filter-radio"
+            />
+            <input
+              type="radio"
+              name="project-filter"
+              id="filter-backend"
+              class="filter-radio"
+            />
+            <input
+              type="radio"
+              name="project-filter"
+              id="filter-fullstack"
+              class="filter-radio"
+            />
+            <input
+              type="radio"
+              name="project-filter"
+              id="filter-uiux"
+              class="filter-radio"
+            />
+
+            <!-- Visual Filter Menu (Head Filter Bar) -->
+            <div class="filter-nav-bar">
+              <label for="filter-all" class="filter-btn-pill" id="label-all">
+                <i class="fa-solid fa-shapes"></i>
+                <span>ทั้งหมด (All)</span>
+              </label>
+
+              <label
+                for="filter-frontend"
+                class="filter-btn-pill"
+                id="label-frontend"
+              >
+                <i class="fa-solid fa-code"></i>
+                <span>Frontend UI</span>
+              </label>
+
+              <label
+                for="filter-backend"
+                class="filter-btn-pill"
+                id="label-backend"
+              >
+                <i class="fa-solid fa-server"></i>
+                <span>Backend & API</span>
+              </label>
+
+              <label
+                for="filter-fullstack"
+                class="filter-btn-pill"
+                id="label-fullstack"
+              >
+                <i class="fa-solid fa-layer-group"></i>
+                <span>Full Stack</span>
+              </label>
+
+              <label for="filter-uiux" class="filter-btn-pill" id="label-uiux">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+                <span>Responsive & UX</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Projects Showcase Grid -->
+          <div class="projects-grid">
+            <!-- Project 1: Full Stack -->
+            <article class="project-card" data-category="fullstack">
+              <div class="card-mockup mockup-blue">
+                <div class="mockup-header">
+                  <span class="mockup-dot red"></span>
+                  <span class="mockup-dot yellow"></span>
+                  <span class="mockup-dot green"></span>
+                  <span class="mockup-url">classroom-portal.app</span>
+                </div>
+                <div class="mockup-body">
+                  <div class="mockup-code-line short"></div>
+                  <div class="mockup-code-line long"></div>
+                  <div class="mockup-code-line medium"></div>
+                  <div class="mockup-center-icon">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                  </div>
+                </div>
+                <span class="category-badge badge-fullstack">Full Stack</span>
+              </div>
+
+              <div class="card-content">
+                <h3 class="card-title">ระบบส่งการบ้านและคลังการสอนออนไลน์</h3>
+                <p class="card-desc">
+                  เว็บแอปพลิเคชันสำหรับนักศึกษาใช้ส่งงาน ตรวจสอบคะแนน
+                  และดาวน์โหลดชีทสรุปบทเรียนประจำวิชา
+                </p>
+                <div class="card-tech-tags">
+                  <span class="tech-tag">HTML5</span>
+                  <span class="tech-tag">CSS3</span>
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">REST API</span>
+                </div>
+                <div class="card-actions">
+                  <a href="#projects" class="card-link btn-demo"
+                    ><i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    ดูตัวอย่าง</a
+                  >
+                  <a href="#projects" class="card-link btn-code"
+                    ><i class="fa-brands fa-github"></i> โค้ดตัวอย่าง</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 2: Frontend -->
+            <article class="project-card" data-category="frontend">
+              <div class="card-mockup mockup-purple">
+                <div class="mockup-header">
+                  <span class="mockup-dot red"></span>
+                  <span class="mockup-dot yellow"></span>
+                  <span class="mockup-dot green"></span>
+                  <span class="mockup-url">shop-responsive.demo</span>
+                </div>
+                <div class="mockup-body">
+                  <div class="mockup-center-icon">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </div>
+                  <div class="mockup-code-line medium"></div>
+                </div>
+                <span class="category-badge badge-frontend">Frontend UI</span>
+              </div>
+
+              <div class="card-content">
+                <h3 class="card-title">เว็บแคตตาล็อกสินค้า Modern E-Commerce</h3>
+                <p class="card-desc">
+                  ตัวอย่างการจัดเลย์เอาต์ร้านค้าออนไลน์ด้วย CSS Grid และ Flexbox
+                  พร้อมแอนิเมชันปุ่มสั่งซื้อและหน้ารายละเอียดสินค้า
+                </p>
+                <div class="card-tech-tags">
+                  <span class="tech-tag">HTML5 Semantic</span>
+                  <span class="tech-tag">CSS Grid</span>
+                  <span class="tech-tag">Flexbox</span>
+                </div>
+                <div class="card-actions">
+                  <a href="#projects" class="card-link btn-demo"
+                    ><i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    ดูตัวอย่าง</a
+                  >
+                  <a href="#projects" class="card-link btn-code"
+                    ><i class="fa-brands fa-github"></i> โค้ดตัวอย่าง</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 3: Backend & API -->
+            <article class="project-card" data-category="backend">
+              <div class="card-mockup mockup-cyan">
+                <div class="mockup-header">
+                  <span class="mockup-dot red"></span>
+                  <span class="mockup-dot yellow"></span>
+                  <span class="mockup-dot green"></span>
+                  <span class="mockup-url">api.auth-system.local</span>
+                </div>
+                <div class="mockup-body">
+                  <div class="mockup-center-icon">
+                    <i class="fa-solid fa-server"></i>
+                  </div>
+                  <div class="mockup-code-line long"></div>
+                  <div class="mockup-code-line short"></div>
+                </div>
+                <span class="category-badge badge-backend">Backend & API</span>
+              </div>
+
+              <div class="card-content">
+                <h3 class="card-title">บริการ RESTful API & Authentication</h3>
+                <p class="card-desc">
+                  ชุดโครงงานตัวอย่างระบบจัดการข้อมูลผู้ใช้ เข้าสู่ระบบด้วย Token
+                  พร้อมหน้าเอกสาร API Documentation ที่สะอาดตา
+                </p>
+                <div class="card-tech-tags">
+                  <span class="tech-tag">Node.js</span>
+                  <span class="tech-tag">JSON</span>
+                  <span class="tech-tag">REST API</span>
+                  <span class="tech-tag">Security</span>
+                </div>
+                <div class="card-actions">
+                  <a href="#projects" class="card-link btn-demo"
+                    ><i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    ดูตัวอย่าง</a
+                  >
+                  <a href="#projects" class="card-link btn-code"
+                    ><i class="fa-brands fa-github"></i> โค้ดตัวอย่าง</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 4: Responsive & UX -->
+            <article class="project-card" data-category="uiux">
+              <div class="card-mockup mockup-emerald">
+                <div class="mockup-header">
+                  <span class="mockup-dot red"></span>
+                  <span class="mockup-dot yellow"></span>
+                  <span class="mockup-dot green"></span>
+                  <span class="mockup-url">dashboard.analytics.ui</span>
+                </div>
+                <div class="mockup-body">
+                  <div class="mockup-center-icon">
+                    <i class="fa-solid fa-chart-pie"></i>
+                  </div>
+                  <div class="mockup-code-line medium"></div>
+                </div>
+                <span class="category-badge badge-uiux">Responsive & UX</span>
+              </div>
+
+              <div class="card-content">
+                <h3 class="card-title">แดชบอร์ดสรุปผลการประเมินผู้เรียน</h3>
+                <p class="card-desc">
+                  การจัดหน้าสถิติ กราฟิกภาพรวม และตารางข้อมูลที่รองรับทั้งหน้าจอ
+                  สมาร์ทโฟน แท็บเล็ต และคอมพิวเตอร์แบบไร้รอยต่อ
+                </p>
+                <div class="card-tech-tags">
+                  <span class="tech-tag">CSS Variables</span>
+                  <span class="tech-tag">Media Queries</span>
+                  <span class="tech-tag">Flexbox</span>
+                </div>
+                <div class="card-actions">
+                  <a href="#projects" class="card-link btn-demo"
+                    ><i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    ดูตัวอย่าง</a
+                  >
+                  <a href="#projects" class="card-link btn-code"
+                    ><i class="fa-brands fa-github"></i> โค้ดตัวอย่าง</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 5: Frontend UI -->
+            <article class="project-card" data-category="frontend">
+              <div class="card-mockup mockup-orange">
+                <div class="mockup-header">
+                  <span class="mockup-dot red"></span>
+                  <span class="mockup-dot yellow"></span>
+                  <span class="mockup-dot green"></span>
+                  <span class="mockup-url">interactive-quiz.app</span>
+                </div>
+                <div class="mockup-body">
+                  <div class="mockup-center-icon">
+                    <i class="fa-solid fa-gamepad"></i>
+                  </div>
+                  <div class="mockup-code-line long"></div>
+                </div>
+                <span class="category-badge badge-frontend">Frontend UI</span>
+              </div>
+
+              <div class="card-content">
+                <h3 class="card-title">เว็บแอปพลิเคชันแบบทดสอบความรู้โค้ดดิ้ง</h3>
+                <p class="card-desc">
+                  มินิเกมตอบคำถามทดสอบไหวพริบเรื่องแท็ก HTML และพร็อพเพอร์ตี้ CSS
+                  ช่วยให้นักศึกษาทบทวนเนื้อหาอย่างสนุกสนาน
+                </p>
+                <div class="card-tech-tags">
+                  <span class="tech-tag">HTML5 Canvas</span>
+                  <span class="tech-tag">CSS Animation</span>
+                  <span class="tech-tag">UI Feedback</span>
+                </div>
+                <div class="card-actions">
+                  <a href="#projects" class="card-link btn-demo"
+                    ><i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    ดูตัวอย่าง</a
+                  >
+                  <a href="#projects" class="card-link btn-code"
+                    ><i class="fa-brands fa-github"></i> โค้ดตัวอย่าง</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 6: Full Stack -->
+            <article class="project-card" data-category="fullstack">
+              <div class="card-mockup mockup-indigo">
+                <div class="mockup-header">
+                  <span class="mockup-dot red"></span>
+                  <span class="mockup-dot yellow"></span>
+                  <span class="mockup-dot green"></span>
+                  <span class="mockup-url">portfolio-showcase.dev</span>
+                </div>
+                <div class="mockup-body">
+                  <div class="mockup-center-icon">
+                    <i class="fa-solid fa-id-card"></i>
+                  </div>
+                  <div class="mockup-code-line medium"></div>
+                </div>
+                <span class="category-badge badge-fullstack">Full Stack</span>
+              </div>
+
+              <div class="card-content">
+                <h3 class="card-title">ระบบสร้างพอร์ตโฟลิโอออนไลน์อัตโนมัติ</h3>
+                <p class="card-desc">
+                  โครงงานแม่แบบสำหรับนักศึกษาให้สามารถปรับแต่งข้อมูลผลงานของตนเอง
+                  พร้อมระบบจัดหมวดหมู่อัจฉริยะและการแสดงผลที่สวยงาม
+                </p>
+                <div class="card-tech-tags">
+                  <span class="tech-tag">HTML5 & CSS3</span>
+                  <span class="tech-tag">CSS :has()</span>
+                  <span class="tech-tag">Modern Web</span>
+                </div>
+                <div class="card-actions">
+                  <a href="#projects" class="card-link btn-demo"
+                    ><i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    ดูตัวอย่าง</a
+                  >
+                  <a href="#projects" class="card-link btn-code"
+                    ><i class="fa-brands fa-github"></i> โค้ดตัวอย่าง</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Website Cost Estimator Section (ส่วนที่ 2 ของโจทย์งานที่ 8) -->
+      <section id="estimator" class="section estimator-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">
+              <i class="fa-solid fa-calculator"></i> ส่วนที่ 2: ระบบคำนวณด้วย JavaScript
+            </span>
+            <h2 class="section-title">ระบบประมาณการค่าบริการพัฒนาเว็บไซต์</h2>
+            <p class="section-subtitle">
+              Website Cost Estimator คำนวณค่าบริการพัฒนาเว็บไซต์เบื้องต้นตามจำนวนหน้าที่ต้องการ คิดอัตรามาตรฐานหน้าละ 500 บาท
+            </p>
+          </div>
+
+          <div class="estimator-card">
+            <div class="estimator-header">
+              <div class="estimator-rate-pill">
+                <i class="fa-solid fa-tag"></i> อัตราค่าบริการหน้าละ <strong>500 บาท</strong>
+              </div>
+              <p class="estimator-instruction">
+                คลิกปุ่มด้านล่างเพื่อระบุจำนวนหน้าผ่านกล่องข้อความ (prompt) และคำนวณค่าบริการรวมโดยอัตโนมัติ
+              </p>
+            </div>
+
+            <div class="estimator-action-wrapper">
+              <button id="calculateCostBtn" class="btn btn-primary btn-lg">
+                <i class="fa-solid fa-calculator"></i> กดเพื่อประมาณการค่าบริการ (ระบุจำนวนหน้า)
+              </button>
+            </div>
+
+            <!-- กล่องแสดงผลลัพธ์จำนวนหน้าและค่าบริการรวมบนหน้าเว็บไซต์ -->
+            <div class="estimator-results-grid">
+              <div class="result-card">
+                <div class="result-card-icon icon-pages">
+                  <i class="fa-solid fa-file-lines"></i>
+                </div>
+                <div class="result-card-text">
+                  <span class="result-label">จำนวนหน้าที่ต้องการพัฒนา</span>
+                  <span id="pageCountResult" class="result-value">- หน้า</span>
+                </div>
+              </div>
+
+              <div class="result-card highlight-card">
+                <div class="result-card-icon icon-total">
+                  <i class="fa-solid fa-coins"></i>
+                </div>
+                <div class="result-card-text">
+                  <span class="result-label">ค่าบริการรวมทั้งหมด</span>
+                  <span id="totalCostResult" class="result-value text-gradient">- บาท</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="estimator-summary-box">
+              <p id="costSummaryText" class="cost-summary-text">
+                💡 ผลลัพธ์การคำนวณจะแสดงขึ้นที่นี่หลังจากคลิกปุ่มประมาณการค่าบริการ
+              </p>
+              <div class="formula-info">
+                <i class="fa-solid fa-circle-info"></i> สูตรคำนวณ: ค่าบริการรวม = จำนวนหน้า × 500 บาท
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Teaching & Curriculum Section -->
+      <section id="teaching" class="section teaching-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">แผนผังการเรียนรู้</span>
+            <h2 class="section-title">หัวข้อการสอนในวิชาการพัฒนาเว็บแอปพลิเคชัน</h2>
+            <p class="section-subtitle">
+              ก้าวเดินทีละสเต็ป จากผู้เริ่มต้นสู่การเป็นนักพัฒนาเว็บมืออาชีพ
+            </p>
+          </div>
+
+          <div class="timeline">
+            <div class="timeline-step">
+              <div class="step-badge">01</div>
+              <div class="step-card">
+                <h4>พื้นฐาน HTML5 & โครงสร้างเว็บไซต์</h4>
+                <p>การเขียนแท็กที่ถูกต้องตามหลัก Semantic, Tag ต่างๆ, Form และ Table</p>
+              </div>
+            </div>
+
+            <div class="timeline-step">
+              <div class="step-badge">02</div>
+              <div class="step-card">
+                <h4>การตกแต่งด้วย Modern CSS3</h4>
+                <p>Box Model, Colors, Typography, Flexbox, Grid, และ CSS Selector ชั้นสูง</p>
+              </div>
+            </div>
+
+            <div class="timeline-step">
+              <div class="step-badge">03</div>
+              <div class="step-card">
+                <h4>Responsive Web Design</h4>
+                <p>Media Queries, Viewport, การจัดเลย์เอาต์สำหรับ Mobile-First</p>
+              </div>
+            </div>
+
+            <div class="timeline-step">
+              <div class="step-badge">04</div>
+              <div class="step-card">
+                <h4>การนำเว็บขึ้นเผยแพร่ (Deployment)</h4>
+                <p>GitHub Pages, Hosting ฟรี, การจัดการ Assets และ Domain Name</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="section contact-section">
+        <div class="container">
+          <div class="contact-card">
+            <div class="contact-info-col">
+              <span class="section-tag">ช่องทางติดต่อ</span>
+              <h2 class="contact-title">มีคำถามหรือต้องการคำแนะนำเพิ่มเติม?</h2>
+              <p class="contact-desc">
+                ยินดีให้คำปรึกษาแก่นักศึกษาทุกคนทั้งเรื่องแบบฝึกหัดในชั้นเรียน
+                และคำถามทั่วไปเกี่ยวกับการพัฒนาเว็บแอปพลิเคชันครับ
+              </p>
+
+              <div class="contact-details">
+                <div class="contact-item">
+                  <div class="contact-icon"><i class="fa-solid fa-user-tie"></i></div>
+                  <div>
+                    <div class="contact-label">ชื่อผู้ติดต่อ</div>
+                    <div class="contact-val">นายปาณวัฐ รักรอดจิต (อาจารย์บอล)</div>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                  <div>
+                    <div class="contact-label">อีเมล</div>
+                    <div class="contact-val">panawat.dev@gmail.com</div>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <div class="contact-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                  <div>
+                    <div class="contact-label">รายวิชา</div>
+                    <div class="contact-val">การพัฒนาเว็บแอปพลิเคชัน (Web Application Development)</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-form-col">
+              <form class="contact-form" action="#" onsubmit="return false;">
+                <h3 class="form-title">ส่งข้อความทักทาย / สอบถาม</h3>
+                <div class="form-group">
+                  <label for="contact-name">ชื่อของคุณ / ชื่อนักศึกษา</label>
+                  <input
+                    type="text"
+                    id="contact-name"
+                    class="form-control"
+                    placeholder="เช่น สมชาย ใจดี"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="contact-email">อีเมลของคุณ</label>
+                  <input
+                    type="email"
+                    id="contact-email"
+                    class="form-control"
+                    placeholder="name@example.com"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="contact-msg">ข้อความที่ต้องการสอบถาม</label>
+                  <textarea
+                    id="contact-msg"
+                    rows="4"
+                    class="form-control"
+                    placeholder="เขียนข้อความหรือคำถามที่ต้องการ..."
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">
+                  <i class="fa-solid fa-paper-plane"></i> ส่งข้อความ
+                </button>
+              </form>
+            </div>
+          </div>
         </div>
       </section>
     </main>
 
+    <!-- Footer -->
     <footer class="site-footer">
-      <p>My Developer Portfolio</p>
-      <p>สร้างด้วย HTML, CSS และ JavaScript</p>
+      <div class="container footer-content">
+        <div class="footer-brand">
+          <a href="#hero" class="nav-logo">
+            <span class="logo-icon"><i class="fa-solid fa-code"></i></span>
+            <span class="logo-text">Panawat<span class="highlight">.Dev</span></span>
+          </a>
+          <p class="footer-desc">
+            เว็บไซต์พอร์ตโฟลิโอประกอบการสอน รายวิชาการพัฒนาเว็บแอปพลิเคชัน
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4>เมนูด่วน</h4>
+          <ul>
+            <li><a href="#hero">หน้าแรก</a></li>
+            <li><a href="#about">เกี่ยวกับฉัน</a></li>
+            <li><a href="#skills">ทักษะการพัฒนา</a></li>
+            <li><a href="#projects">ผลงาน & ฟิลเตอร์</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>แหล่งข้อมูลการเรียนรู้</h4>
+          <ul>
+            <li><a href="https://developer.mozilla.org" target="_blank" rel="noopener">MDN Web Docs</a></li>
+            <li><a href="https://w3schools.com" target="_blank" rel="noopener">W3Schools Tutorial</a></li>
+            <li><a href="https://css-tricks.com" target="_blank" rel="noopener">CSS-Tricks Guide</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+          <p>© 2026 นายปาณวัฐ รักรอดจิต. All Rights Reserved. Built with Pure HTML & CSS.</p>
+          <a href="#hero" class="back-to-top">
+            <i class="fa-solid fa-arrow-up"></i> กลับสู่ด้านบน
+          </a>
+        </div>
+      </div>
     </footer>
   </body>
 </html>
